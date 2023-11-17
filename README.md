@@ -92,15 +92,6 @@ Here is the major stats that is tracked individually for all major characters:
 - `trust` how much this character will listen to your input and not question it and how much they will ask for you input
 - `opinion` how good this character's opinion of the player is, a better opinion does not mean that they NPC will trust the character, but they are more willing to listen to the player's ideas with an open mind
 
-Specific things to track:
-
-- `delusion` a special stat for the Queen that increases over time, it is the amount she is completely trusting in the worst
-    - pointing out inconsistencies can decrease `delusion` but it is dangerous and may cost `trust` if done wrong
-    - agreeing with her every whim will increase the rate of growth for `delusion`
-    - `delusion` is linked to a list of things that the Queen will grow to unconditionally believe, this list is a subset of a constant list
-- `strength` a special stat for \[Veritus\], the higher the value, the longer the player can navigate and view through the different mirrors, also the longer the recordings can get
-    - `strength` is tied to the value `energy`, increased `strength` will slow the decrease of `energy` spend on opening books, viewing through mirrors, and recording
-
 ### Agency
 
 The player does not have a lot of agency to begin with but can grow to gain more agency depending on the `trust` level they have with the Queen. This is the only NPC that the player can directly interact with through text. The Queen character should be implemented through a rule-based chatbot that the player can freely chat to. The chatting is limited to XXX characters (we'll have to see through testing) so it won't overcomplicate the number of tests and tokenization of the chatbot. Here is a [link](https://youtu.be/Ea9jgBjQxEs) that you can reference.
