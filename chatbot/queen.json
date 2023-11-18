@@ -2,13 +2,13 @@
     {
       "response_type": "greeting",
       "user_input": ["hello", "hi", "hey"],
-      "bot_response": "Hey there!",
+      "bot_response": "Hello, Veritus.",
       "required_words": []
     },
     {
       "response_type": "greeting",
-      "user_input": ["see you", "goodbye", "bye"],
-      "bot_response": "See you later!",
+      "user_input": ["farewell", "see you", "goodbye", "bye"],
+      "bot_response": "Farewell.",
       "required_words": []
     },
     {
