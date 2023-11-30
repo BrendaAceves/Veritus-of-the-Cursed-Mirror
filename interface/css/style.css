@@ -1,0 +1,86 @@
+/* for debugging  */
+
+div,img {
+    border: 1px solid red;
+    padding: 0;
+}
+
+/* main */
+/* https://www.fontspace.com/pixeloid-font-f69232 */
+
+@font-face {
+    font-family: "pixeloid mono";
+    src: url('../../assets/PixeloidMono.ttf') format('truetype');
+}
+
+body {
+    font-family: "pixeloid mono";
+    padding: 0.5%;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    padding: 10px 50px;
+    box-sizing: border-box;
+}
+
+.row-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* sizing */
+
+.small-icon {
+    height: 128px;
+    width: auto;
+}
+
+/* text */
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 120%;
+}
+
+/* items and clickable objects */
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+}
+
+.item img {
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.selected-item {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* screens */
+
+.screen:not(.current-screen) {
+    display: none;
+}
+
+.screen {
+    height: 85%;
+    width: 100%;
+    box-sizing: border-box;
+}

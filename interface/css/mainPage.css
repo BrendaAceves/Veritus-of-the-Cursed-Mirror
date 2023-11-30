@@ -1,0 +1,38 @@
+/* mirrors */
+
+.mirrors {
+    justify-content: space-between;
+}
+
+/* trackers */
+
+.trackers {
+    height: 100%;
+    padding-bottom: 2%;
+    justify-content: end;
+}
+
+.tracker-labels {
+    align-items: flex-end;
+}
+
+.tracker-values {
+    align-items: flex-start;
+}
+
+/* icons */
+
+.icons {
+    justify-content: space-between;
+    width: 70%;
+}
+
+.icon-obj img {
+    opacity: 75%;
+}
+/* other */
+
+#bottom-bar-wrapper {
+    width: 100%;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>veritus of the cursed mirror</title>
+    <meta charset="UTF-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="interface/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="interface/css/mainPage.css" />
+    <link rel="stylesheet" type="text/css" href="interface/css/subPage.css" />
+    <link rel="stylesheet" type="text/css" href="interface/css/color.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="interface/js/script.js" DEFER></script>
+</head>
+<body class="col-div">
+  <h1>VERITUS OF THE CURSED MIRROR</h1>
+  <div id="main-screen" class="screen current-screen">
+    <div class="mirrors row-div">
+      <div class="mirror-obj item" id="M_queens-personal-quarters">
+        <img src="assets/mirror.png" />
+        <p>QUEEN'S QUARTERS</p>
+      </div>
+      <div class="mirror-obj item" id="M_main-hallway">
+        <img src="assets/mirror.png" />
+        <p>MAIN HALLWAY</p>
+      </div>
+      <div class="mirror-obj item" id="M_magic-tower">
+        <img src="assets/mirror.png" />
+        <p>MAGIC TOWER</p>
+      </div>
+      <div class="mirror-obj item" id="M_knights-headquarters">
+        <img src="assets/mirror.png" />
+        <p>KNIGHT'S HQ</p>
+      </div>
+      <div class="mirror-obj item" id="M_wizards">
+        <img src="assets/mirror.png" />
+        <p>WIZARDS</p>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="row-div" id="bottom-bar-wrapper">
+      <div class="tracker-wrapper row-div">
+        <div class="tracker-labels trackers col-div">
+          <p class="T_day">DAY : </p>
+          <p class="T_time">TIME : </p>
+          <p class="T_energy">ENERGY : </p>
+        </div>
+        <div class="tracker-values trackers col-div">
+          <p class="T_day-value"></p>
+          <p class="T_time-value"></p>
+          <p class="T_energy-value"></p>
+        </div>
+      </div>
+
+      <div class="icons row-div">
+        <div class="icon-obj item" id="I_library">
+          <img src="assets/library.png"/>
+          <p>LIBRARY</p>
+        </div>
+        <div class="icon-obj item" id="I_notepad">
+          <img src="assets/paper.png"/>
+          <p>NOTEPAD</p>
+        </div>
+        <div class="icon-obj item" id="I_recordings">
+          <img src="assets/cassetteplayer.png"/>
+          <p>RECORDINGS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- hide following screens by default -->
+  <!--         mirror screens         -->
+  <div id="mirror-screen" class="screen">
+    <div id="M_center-text"></div>
+  </div>
+
+  <!--          icon screens          -->
+  <div id="library-screen" class="screen">
+    <h2>THE CURSED LIBRARY</h2>
+    <div id="book-display-wrapper" class="screen-wrapper row-div">
+      <div id="book-sidebar" class="col-div sidebar-wrapper">
+        <img src="assets/potionbasics.png" class="book-icon item" data-booktitle="the-basics-of-all-things-potions" />
+        <img src="assets/thingsliving.png" class="book-icon item" data-booktitle="plants-and-all-things-living" />
+        <img src="assets/ttwmtb.png" class="book-icon item" data-booktitle="things-that-weren't-meant-to-be" />
+        <img src="assets/geographic.png" class="book-icon item" data-booktitle="of-those-who-we've-lost" />
+        <img src="assets/city.png" class="book-icon item" data-booktitle="between-the-seas-and-the-skies" />
+        <img src="assets/ode.png" class="book-icon item" data-booktitle="ode-to-the-living-dead" />
+      </div>
+      <div id="book-information" class="information-panel">
+        <h3 id="book-title-text"></h3>
+        <div id="book-synopsis-text"></div>
+        <div id="book-body-text"></div>
+      </div>
+      <div class="right-sidebar information-panel col-div">
+        <div class="sidebar-notepad col-div">
+          <div class="row-div">
+            <img src="assets/paper.png" class="small-icon" />
+            <p>YOUR SMALL NOTEPAD</p>
+          </div>
+          <textarea class="notepad-text" type="text"></textarea>
+        </div>
+        <div class="tracker-wrapper row-div">
+          <div class="tracker-labels trackers col-div">
+            <p class="T_time">TIME : </p>
+            <p class="T_energy">ENERGY : </p>
+          </div>
+          <div class="tracker-values trackers col-div">
+            <p class="T_time-value"></p>
+            <p class="T_energy-value"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="notepad-screen" class="screen">
+    <h2>A SMALL NOTEPAD</h2>
+    <div class="notepad-text"></div>
+  </div>
+
+  <div id="recordings-screen" class="screen">
+    <h2>RECORDING LIBRARY</h2>
+    <div id="recording-display-wrapper" class="screen-wrapper row-div">
+      <div id="recording-sidebar" class="col-div sidebar-wrapper">
+        <img src="assets/cassette1.png" class="recording-icon item" data-recordingnum="1" />
+        <img src="assets/cassette2.png" class="recording-icon item" data-recordingnum="2" />
+        <img src="assets/cassette3.png" class="recording-icon item" data-recordingnum="3" />
+      </div>
+      <div id="recording-information" class="information-panel">
+        <h3 id="recording-title-text"></h3>
+        <div id="recording-data-text"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--        global button           -->
+  <div id="return-to-main-page"></div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+.screen-wrapper {
+    height: 90%;
+    justify-content: space-between;
+}
+
+/* sidebar */
+
+.sidebar-wrapper {
+    height: 100%;
+    width: fit-content;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.sidebar-wrapper {
+    padding: 10px;
+}
+
+.information-panel {
+    padding: 10px;
+}
+
+.right-sidebar {
+    align-self: stretch;
+    margin-left: auto;
+}
+
+.tracker-wrapper {
+    margin-top: auto;
+    align-self: flex-end;
+    height: fit-content;
+}
+
+/* notepad page */
+.sidebar-notepad {
+    flex-grow: 1;
+}
+
+.notepad-text {
+    width: 100%;
+    flex-grow: 1;
+    outline: none;
+    background-color: var(--transparent);
+    overflow-y: scroll;
+    resize: none;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* library page */

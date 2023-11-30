@@ -1,0 +1,14 @@
+{
+    "day" : 1,
+    "hour" : 1,
+    "energy" : 15,
+    "queen" : [],
+    "wilsur" : [],
+    "arison" : [],
+    "book" : {"the basics of all things potions":2},
+    "recording" : {
+        "1" : "",
+        "2" : "",
+        "3" : ""
+    }
+}

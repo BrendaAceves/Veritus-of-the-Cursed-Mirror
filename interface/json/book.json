@@ -1,0 +1,26 @@
+{
+    "the basics of all things potions" : {
+        "synopsis" : "potions, potions, potions. all the recipes a good alchemist should know by heart.",
+        "passages" : ["passage1", "passage2", "passage3"]
+    },
+    "plants and all things living" : {
+        "synopsis" : "",
+        "passages" : []
+    },
+    "things that weren't meant to be" : {
+        "synopsis" : "",
+        "passages" : []
+    },
+    "of those who we've lost" : {
+        "synopsis" : "",
+        "passages" : []
+    },
+    "between the seas and the skies" : {
+        "synopsis" : "",
+        "passages" : []
+    },
+    "ode to the living dead" : {
+        "synopsis" : "",
+        "passages" : []
+    }
+}

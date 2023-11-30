@@ -1,0 +1,17 @@
+/* color palette */
+
+body {
+    --light-blue: #3871AA;
+    --dark-blue: #004BA8;
+    --light-grey: #4A525A;
+    --dark-grey: #171d26;
+    --black: #07070A;
+    --transparent: rgba(0, 0, 0, 0);
+}
+
+/* coloring */
+
+body {
+    background-color: var(--dark-grey);
+    color: var(--light-blue);
+}
