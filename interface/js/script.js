@@ -20,6 +20,13 @@ for (let key of screens) {
     $(`#I_${key}`).click(function() {toggleScreen(key)});
 }
 
+// mirror functions ////////////////////////////////////////////////////////////
+
+$(".mirror-obj").click(function() {
+    // toggle screen
+    toggleScreen("mirror");
+});
+
 // libray functions ////////////////////////////////////////////////////////////
 
 $(".book-icon").click(function() {
@@ -74,3 +81,7 @@ $(".recording-icon").click(function() {
         $("#recording-data-text").append(`<p>this recording is currently empty`);
     }
 });
+
+// notepad functions ///////////////////////////////////////////////////////////
+
+// data binding?
