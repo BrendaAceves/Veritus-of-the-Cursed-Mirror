@@ -1,7 +1,7 @@
 /* color palette */
 
 body {
-    --light-blue: #3871AA;
+    --light-blue: #4982ba;
     --dark-blue: #004BA8;
     --light-grey: #4A525A;
     --dark-grey: #171d26;
@@ -14,4 +14,8 @@ body {
 body {
     background-color: var(--dark-grey);
     color: var(--light-blue);
+}
+
+.screen,.screen-wrapper,.right-sidebar,.sidebar-wrapper{
+    border: 1px solid var(--dark-blue);
 }

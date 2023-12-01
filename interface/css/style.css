@@ -1,7 +1,7 @@
 /* for debugging  */
 
 div,img {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 0;
 }
 
@@ -21,6 +21,7 @@ body {
     height: 100vh;
     /* overflow: hidden; */
     padding: 10px 50px;
+    display: flex;
     box-sizing: border-box;
 }
 
@@ -47,8 +48,13 @@ h1 {
     text-align: center;
 }
 
+h2,h3 {
+    margin-left: 10px;
+}
+
 p {
     font-size: 120%;
+    margin: 15px 10px;
 }
 
 /* items and clickable objects */
@@ -81,6 +87,7 @@ p {
 
 .screen {
     height: 85%;
+    /* flex-grow: 1; */
     width: 100%;
     box-sizing: border-box;
 }

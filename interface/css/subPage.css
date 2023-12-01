@@ -18,7 +18,8 @@
 }
 
 .information-panel {
-    padding: 10px;
+    padding: 10px 20px;
+    overflow-y: scroll;
 }
 
 .right-sidebar {

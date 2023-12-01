@@ -20,47 +20,7 @@ for (let key of screens) {
     $(`#I_${key}`).click(function() {toggleScreen(key)});
 }
 
-// cookies /////////////////////////////////////////////////////////////////////
-let cookiesJSON;
-async function getCookieData() {
-    console.log("cookie data getting");
-    let response = await fetch("./interface/json/cookies.json");
-    cookiesJSON = await response.json();
-    console.log("cookie data got");
-}
-getCookieData();
-    
 // libray functions ////////////////////////////////////////////////////////////
-let bookJSON;
-async function getBookData() {
-    // need full path to work
-    let response = await fetch("./interface/json/book.json");
-    console.log(response);
-    bookJSON = await response.json();
-    console.log("book data got");
-}
-getBookData();
-
-function toggleItemSelection(item) {
-    $(".selected-item").toggleClass("selected-item");
-    item.toggleClass("selected-item");
-}
-
-function resetPages() {
-    // deselect all pages
-    $(".selected-item").toggleClass("selected-item");
-    // hide hidden things
-    $("#read-book").hide();
-    // reset text on pages
-    $("#book-title-text").html("select a book from the left sidebar to read its contents");
-    $("#recording-title-text").html("select a recording from the left sidebar to view its contents");
-    let thingsToEmpty = ["#book-synopsis-text", "#book-body-text"];
-    for (selector in thingsToEmpty) {
-        $(selector).empty();
-    }
-}
-
-$(document).ready(resetPages);
 
 $(".book-icon").click(function() {
     console.log("book clicked");
@@ -77,16 +37,40 @@ $(".book-icon").click(function() {
         cookiesJSON.book[title] = 0;
     }
     if (cookiesJSON.book[title] === 0) {
-        $("#book-body-text").append("<p>You have yet to start reading this book.</p>");
+        $("#book-body-text").append(`<p>You have yet to start reading this book.</p>`);
         return;
     }
     for (let i = 0; i < cookiesJSON.book[title]; ++i) {
-        $("#book-body-text").append("<p>" + bookJSON[title].passages[i] + "</p>");
+        $("#book-body-text").append(`<p>${bookJSON[title].passages[i]}`);
     }
     // the read button
     if (cookiesJSON.book[title] < bookJSON[title].passages.length) {
         $("#read-book").show();
     } else {
         $("#read-book").hide();
+    }
+});
+
+// recording functions /////////////////////////////////////////////////////////
+
+$(".recording-icon").click(function() {
+    console.log("recording clicked");
+    // selection coloring
+    toggleItemSelection($(this));
+    // clear old data
+    $("#recording-length-text").empty();
+    $("#recording-data-text").empty()
+    // input data into the right fields
+    let recordingNum = $(this).data("recordingnum");
+    let recordingData = cookiesJSON.recording[recordingNum.toString()];
+    // the data is stored in cookies.json key = recording
+    $("#recording-title-text").html(`recording no.${recordingNum}`);
+    if (recordingData.len) {
+        $("#recording-length-text").append(`<p>recording length: ${recordingData.len} hours`);
+        for (let i = 0; i < recordingData.data.length; ++i) {
+            $("#recording-data-text").append(`<p>${recordingData.data[i]}`);
+        }
+    } else {
+        $("#recording-data-text").append(`<p>this recording is currently empty`);
     }
 });
