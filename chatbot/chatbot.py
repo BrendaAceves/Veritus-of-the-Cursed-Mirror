@@ -2,7 +2,7 @@
 
 import json
 import re
-import chatbot.queen_random as queen_random
+import queen_random
 
 
 def load_json(file):
@@ -54,8 +54,19 @@ def get_response(input_string):
     return queen_random.random_string()
 
 
-while True:
-    user_input = input("You: ")
-    print("the Queen:", get_response(user_input))
-    if ():
-        pass
+def prompt(key):
+    if key == "summon1":
+        return "Say... I'd like to make some people disappear. You'd have a trick for that, don't you?"
+
+
+def conversation(key):
+    # introducion
+    print(f"the Queen: {get_response('hello')}")
+    print(f"the Queen: {prompt(key)}")
+    while True:
+        user_input = input("You: ")
+        print("the Queen:", get_response(user_input))
+        if ("goodbye" in user_input):
+            break
+
+conversation("summon1")
